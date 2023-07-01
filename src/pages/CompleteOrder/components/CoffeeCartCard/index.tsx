@@ -8,7 +8,7 @@ import {
 import { Trash } from "phosphor-react";
 import { formatMoney } from "../../../../utils/formatMoney";
 import { useContext } from "react";
-import { CartContext, CartItem } from "../../../../contexts/CartContext";
+import { CartContext } from "../../../../contexts/CartContext";
 import Image from "next/image";
 
 interface CoffeeCartCardProps {
@@ -22,7 +22,7 @@ export function CoffeeCartCard({ product }: any) {
 
   const priceWithoutPrefix = product.price.replace("R$", "").trim();
 
-  const { cartItems, removeItem, changeCartItemQuantity, removeProductCart } =
+  const { cartItems, changeCartItemQuantity, removeProductCart } =
     useContext(CartContext);
 
   function handleIncrease() {

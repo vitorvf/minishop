@@ -30,8 +30,8 @@ export const Tags = styled.div`
   flex-wrap: wrap;
 
   span {
-    background: ${({ theme }) => theme.colors["brand-yellow-light"]};
-    color: ${({ theme }) => theme.colors["brand-yellow-dark"]};
+    background: ${({ theme }) => theme.colors["brand-green-300"]};
+    color: ${({ theme }) => theme.colors["base-white"]};
     font-size: ${({ theme }) => theme.textSizes["components-tag"]};
     text-transform: uppercase;
     padding: 0.25rem 0.5rem;
@@ -42,7 +42,7 @@ export const Tags = styled.div`
 
 export const Name = styled(TitleText).attrs({
   size: "s",
-  color: "subtitle",
+  color: "white",
 })`
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -50,7 +50,7 @@ export const Name = styled(TitleText).attrs({
 
 export const Description = styled(RegularText).attrs({
   size: "s",
-  color: "label",
+  color: "white",
 })`
   margin-bottom: 2rem;
 `;
@@ -82,14 +82,14 @@ export const AddCartWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: ${({ theme }) => theme.colors["brand-purple-dark"]};
-    color: ${({ theme }) => theme.colors["base-card"]};
+    background: ${({ theme }) => theme.colors["brand-green-300"]};
+    color: ${({ theme }) => theme.colors["base-white"]};
     border-radius: 6px;
     margin-left: 0.3rem;
     transition: 0.4s;
 
     &:hover {
-      background: ${({ theme }) => theme.colors["brand-purple"]};
+      background: ${({ theme }) => theme.colors["brand-green-200"]};
     }
   }
 `;

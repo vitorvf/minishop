@@ -3,8 +3,9 @@ import { RegularText } from "../../../../components/Typography";
 import { Button } from "../../../../components/Button";
 import { useCart } from "../../../../hooks/useCart";
 import { formatMoney } from "../../../../utils/formatMoney";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../../../../contexts/CartContext";
+import axios from "axios";
 
 const DELIVERY_PRICE = 3.5;
 
@@ -16,7 +17,27 @@ export function ConfirmationSection() {
   // const formattedCartTotal = formatMoney(cartTotal);
   // const formattedDeliveryPrice = formatMoney(DELIVERY_PRICE);
 
-  const { totalPrice } = useContext(CartContext);
+  const { totalPrice, cartItems } = useContext(CartContext);
+
+  const [isCreatingCheckoutSession, setIsCreatingCheckoutSession] =
+    useState(false);
+
+  async function handleTest() {
+    try {
+      setIsCreatingCheckoutSession(true);
+
+      const response = await axios.post("/api/checkout", {
+        products: cartItems,
+      });
+
+      const { checkoutUrl } = response.data;
+
+      window.location.href = checkoutUrl;
+    } catch (err) {
+      setIsCreatingCheckoutSession(false);
+      alert("Falha ao redirecionar ao checkout!");
+    }
+  }
 
   console.log(totalPrice);
 
@@ -45,6 +66,7 @@ export function ConfirmationSection() {
       </div>
 
       <Button
+        onClick={handleTest}
         text="Confirmar Pedido"
         disabled={totalPrice <= 0}
         type="submit"

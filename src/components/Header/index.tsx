@@ -1,44 +1,38 @@
-import {
-  HeaderButton,
-  HeaderButtonsContainer,
-  HeaderContainer,
-} from "./styles";
-import coffeeLogoImg from "../../assets/coffee-delivery-logo.svg";
-import { MapPin, ShoppingCart } from "phosphor-react";
+import * as Dialog from "@radix-ui/react-dialog";
+import { useRouter } from "next/router";
+import { Bag } from "phosphor-react";
 import { useContext } from "react";
+
+import { ButtonCartContainer, HeaderContainer } from "./styles";
 import Image from "next/image";
+
+import { CartContext } from "@/contexts/CartContext";
+import { Cart } from "../Cart/cart";
 import Link from "next/link";
-import { CartContext } from "../../contexts/CartContext";
 
 export function Header() {
+  const { pathname } = useRouter();
+  // const { cartCount } = useShoppingCart();
   const { cartItems } = useContext(CartContext);
+  // const showCartButton = pathname !== "/success";
 
-  const cartQuantity = cartItems.length;
+  const cartCount = cartItems.length;
 
   return (
     <HeaderContainer>
-      <div className="container">
-        <Link href="/">
-          <div className="link-wrapper">
-            <Image src={coffeeLogoImg} alt="" width={100} height={100} />
-          </div>
-        </Link>
+      {/* <Image src={logoImg} alt="" /> */}
 
-        <HeaderButtonsContainer>
-          <HeaderButton variant="purple">
-            <MapPin size={20} weight="fill" />
-            Porto Alegre, RS
-          </HeaderButton>
-          <Link href="CompleteOrder/">
-            <div className="link-wrapper">
-              <HeaderButton variant="yellow">
-                {cartQuantity >= 1 && <span>{cartQuantity}</span>}
-                <ShoppingCart size={20} weight="fill" />
-              </HeaderButton>
-            </div>
-          </Link>
-        </HeaderButtonsContainer>
-      </div>
+      <Dialog.Root>
+        <Dialog.Trigger asChild>
+          <ButtonCartContainer>
+            <Bag weight="bold" />
+            <span>{cartCount}</span>
+          </ButtonCartContainer>
+        </Dialog.Trigger>
+        <Cart />
+      </Dialog.Root>
+
+      <Link href="CompleteOrder/">CLICK</Link>
     </HeaderContainer>
   );
 }

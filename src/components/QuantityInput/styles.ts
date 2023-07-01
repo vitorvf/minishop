@@ -6,7 +6,7 @@ export interface QuantityInputContainerProps {
 
 export const QuantityInputContainer = styled.div<QuantityInputContainerProps>`
   flex: 1;
-  background: ${({ theme }) => theme.colors["base-button"]};
+  background: ${({ theme }) => theme.colors["brand-gray-300"]};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,7 +18,7 @@ export const QuantityInputContainer = styled.div<QuantityInputContainerProps>`
     width: 100%;
     background: none;
     border: none;
-    color: ${({ theme }) => theme.colors["base-title"]};
+    color: ${({ theme }) => theme.colors["base-white"]};
 
     &:focus {
       outline: none;
@@ -45,7 +45,7 @@ export const IconWrapper = styled.button.attrs({
   height: 0.875rem;
   border: none;
   background: none;
-  color: ${({ theme }) => theme.colors["brand-purple"]};
+  color: ${({ theme }) => theme.colors["brand-green-300"]};
   transition: 0.4s;
 
   &:disabled {
@@ -53,6 +53,6 @@ export const IconWrapper = styled.button.attrs({
   }
 
   &:not(:disabled):hover {
-    color: ${({ theme }) => theme.colors["brand-purple-dark"]};
+    color: ${({ theme }) => theme.colors["brand-green-200"]};
   }
 `;

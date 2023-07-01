@@ -1,8 +1,8 @@
 export const defaultTheme = {
   colors: {
     "base-white": "#FFFFFF",
-    "base-background": "#FAFAFA",
-    "base-card": "#F3F2F2",
+    "base-background": "#121214",
+    "base-card": "#202024",
     "base-input": "#EDEDED",
     "base-button": "#E6E5E5",
     "base-hover": "#D7D5D5",
@@ -13,6 +13,9 @@ export const defaultTheme = {
     "base-error": "#f84747",
     "brand-purple-dark": "#4B2995",
     "brand-purple": "#8047F8",
+    "brand-green-300": "#00b37e",
+    "brand-green-200": "#088862",
+    "brand-gray-300": "#574f4d",
     "brand-purple-light": "#EBE5F9",
     "brand-yellow-dark": "#C47F17",
     "brand-yellow": "#DBAC2C",

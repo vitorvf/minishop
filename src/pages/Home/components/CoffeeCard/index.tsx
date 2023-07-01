@@ -40,7 +40,6 @@ export function CoffeeCard({ product }: any) {
     addToCart(product, quantity);
   }
 
-
   const priceWithoutPrefix = product.price.replace("R$", "").trim();
 
   const [quantity, setQuantity] = useState(1);
@@ -77,8 +76,10 @@ export function CoffeeCard({ product }: any) {
 
       <CardFooter>
         <div>
-          <RegularText size="s">R$</RegularText>
-          <TitleText size="m" color="text" as="strong">
+          <RegularText color="white" size="s">
+            R$
+          </RegularText>
+          <TitleText size="m" color="white" as="strong">
             {priceWithoutPrefix}
           </TitleText>
         </div>
