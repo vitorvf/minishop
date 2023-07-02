@@ -7,6 +7,13 @@ import {
   Description,
   CardFooter,
   AddCartWrapper,
+  ImageCard,
+  CardName,
+  Price,
+  PriceBefore,
+  PriceNow,
+  ProductAction,
+  ButtonAction,
 } from "./styles";
 import { ShoppingCart } from "phosphor-react";
 import { MouseEvent, useContext, useState } from "react";
@@ -58,10 +65,12 @@ export function CoffeeCard({ product }: any) {
   // }
 
   // const formattedPrice = formatMoney(coffee.price);
-
+  // Tamanho de imagem 120
   return (
     <CoffeeCardContainer>
-      <Image src={`${product.imageUrl}`} alt="" width={120} height={120} />
+      <ImageCard>
+        <Image src={`${product.imageUrl}`} alt="" width={244} height={244} />
+      </ImageCard>
       <Tags>
         {/* {product.tags.map((tag) => (
           <span key={`${product.id}${tag}`}>{tag}</span>
@@ -69,17 +78,36 @@ export function CoffeeCard({ product }: any) {
         <span>teste tag</span>
       </Tags>
 
-      <Name>{product.name}</Name>
-      <Description>
-        Expresso diluído, menos intenso que o tradicional
-      </Description>
+      <CardName>
+        {/* <Name>{product.name}</Name> */}
+        {product.name}
+      </CardName>
+      <Price>
+        <PriceBefore>
+          R$<span>269,90</span>
+        </PriceBefore>
 
-      <CardFooter>
+        <PriceNow>
+          <span content="R$129.90">R${priceWithoutPrefix}</span>
+        </PriceNow>
+      </Price>
+
+      {/* <Description>
+        Expresso diluído, menos intenso que o tradicional
+      </Description> */}
+
+      <ProductAction>
+        <ButtonAction onClick={(event) => handleAddToCart(event, product, 1)}>
+          <ShoppingCart weight="fill" size={21} />
+          Adicionar
+        </ButtonAction>
+      </ProductAction>
+      {/* <CardFooter>
         <div>
-          <RegularText color="white" size="s">
+          <RegularText color="gray" size="s">
             R$
           </RegularText>
-          <TitleText size="m" color="white" as="strong">
+          <TitleText size="m" color="gray" as="strong">
             {priceWithoutPrefix}
           </TitleText>
         </div>
@@ -94,7 +122,7 @@ export function CoffeeCard({ product }: any) {
             <ShoppingCart weight="fill" size={22} />
           </button>
         </AddCartWrapper>
-      </CardFooter>
+      </CardFooter> */}
     </CoffeeCardContainer>
   );
 }
