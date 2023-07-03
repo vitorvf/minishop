@@ -12,9 +12,11 @@ interface Product {
   price: string;
   numberPrice: number;
   defaultPriceId: string;
+  metadata: string;
 }
 
 export default function Home({ products }: { products: Product[] }) {
+  // console.log(products);
   return (
     <LayoutContainer>
       <Intro />
@@ -30,6 +32,8 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const products = response.data.map((product) => {
     const price = product.default_price as Stripe.Price;
+    const metadata = product.metadata?.precoantigo || "";
+
     return {
       id: product.id,
       name: product.name,
@@ -42,9 +46,12 @@ export const getStaticProps: GetStaticProps = async () => {
         : "",
       numberPrice: price.unit_amount ? price.unit_amount / 100 : 0,
       defaultPriceId: price.id,
+      nickname: price.nickname,
+      metadata: metadata,
+      // preco_antigo: p
     };
   });
-
+  // console.log(metadata);
 
   return {
     props: {

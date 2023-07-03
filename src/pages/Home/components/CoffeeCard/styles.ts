@@ -137,6 +137,52 @@ export const ButtonAction = styled.button`
   }
 `;
 
+export const DivTags = styled.div`
+  display: flex;
+  margin: 9px 0;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+`;
+
+export const Lancamento = styled.div`
+  color: white;
+  background: #192c53;
+
+  padding: 1px 8px;
+  margin-right: 9px;
+  margin-bottom: 6px;
+  border: 1px solid #192c53;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+`;
+
+export const Personalize = styled.div`
+  color: #192c53;
+  border-color: #192c53;
+  padding: 1px 8px;
+  margin-right: 9px;
+  margin-bottom: 6px;
+  border: 1px solid #192c53;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+`;
+
+export const DivSpan = styled.div`
+  font-size: 10px;
+  font-weight: 600;
+  color: #192c53;
+  line-height: 1;
+  margin-top: 5px;
+`;
+
+export const SpanPrecoAvista = styled.span`
+  font-size: inherit;
+  font-weight: inherit;
+`;
+
 export const Name = styled(TitleText).attrs({
   size: "s",
   color: "gray",

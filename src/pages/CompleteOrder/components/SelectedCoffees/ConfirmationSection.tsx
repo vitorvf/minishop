@@ -39,7 +39,7 @@ export function ConfirmationSection() {
     }
   }
 
-  console.log(totalPrice);
+  // console.log(totalPrice);
 
   // const TotalComEntrega = totalPrice + entrega;
 
