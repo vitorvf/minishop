@@ -82,7 +82,7 @@ export const InfoContainer = styled("div", {
     fontSize: "$md",
     fontWeight: 400,
     lineHeight: "160%",
-    color: "white",
+    color: "#192C53",
     // Configuração para nomes grandes
     overflow: "hidden",
     textOverflow: "ellipsis", //os 3 potinhos
@@ -95,7 +95,7 @@ export const InfoContainer = styled("div", {
     fontSize: "$md",
     fontWeight: 700,
     lineHeight: "160%",
-    color: "white",
+    color: "#192C53",
   },
 
   ".actionsContainer": {

@@ -24,8 +24,8 @@ export function CompleteOrderForm() {
       </FormSectionContainer>
       <FormSectionContainer>
         <SectionTitle
-          title="Pagamento"
-          subtitle="O pagamento é feito na entrega. Escolha a forma que deseja pagar"
+          title="Formas de Pagamento"
+          subtitle="Escolha a forma de Pagamento ao confirmar pedido."
           icon={<CurrencyDollar color={colors["brand-purple"]} size={22} />}
         />
         <PaymentMethodOptions />

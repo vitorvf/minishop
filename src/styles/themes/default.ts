@@ -2,12 +2,16 @@ export const defaultTheme = {
   colors: {
     "base-white": "#FFFFFF",
     "base-background": "#121214",
-    "base-card": "#202024",
+    // "base-card": "#202024",
+    "base-card": "#F3F2F2",
+
     "base-input": "#EDEDED",
     "base-button": "#E6E5E5",
     "base-hover": "#D7D5D5",
     "base-label": "#8D8686",
     "base-text": "#574F4D",
+    "base-blue": "#121135",
+    "base-blue-hover": "#0b0b1f",
     "base-subtitle": "#403937",
     "base-gray": "#747474",
     "base-title": "#272221",

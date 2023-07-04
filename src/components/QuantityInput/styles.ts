@@ -6,7 +6,7 @@ export interface QuantityInputContainerProps {
 
 export const QuantityInputContainer = styled.div<QuantityInputContainerProps>`
   flex: 1;
-  background: ${({ theme }) => theme.colors["brand-gray-300"]};
+  background: ${({ theme }) => theme.colors["base-button"]};
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -3,17 +3,10 @@ import axios from "axios";
 import { X } from "phosphor-react";
 import { useContext, useState } from "react";
 import { CardCart } from "../CardCart";
-import {
-  ButtonClose,
-  ButtonFinishCart,
-  CartContainer,
-  CartContent,
-  CartContentInfo,
-  CartPriceContent,
-  CartQuantityContent,
-} from "./styles";
+import { DialogContent, DialogOverlay } from "./styles";
 import { CartContext } from "@/contexts/CartContext";
 import { formatMoney } from "@/utils/formatMoney";
+import Link from "next/link";
 
 export interface IProduct {
   id: string;
@@ -55,13 +48,17 @@ export function Cart() {
 
   return (
     <Dialog.Portal>
-      <CartContainer>
-        <ButtonClose>
-          <X weight="bold" />
-        </ButtonClose>
+      <DialogOverlay />
+      <DialogContent>
+        <Dialog.Close asChild>
+          <button className="closeButton" aria-label="Close">
+            <X />
+          </button>
+        </Dialog.Close>
+
         <Dialog.Title>Sacola de compras</Dialog.Title>
 
-        <CartContent>
+        <section className="contentItems">
           {cartItems.length <= 0 && (
             <p>Seu carrinho está sem produtos, vamos comprar algo novo!!</p>
           )}
@@ -77,23 +74,46 @@ export function Cart() {
               removeProductCart={removeProductCart}
             />
           ))}
-        </CartContent>
+        </section>
 
-        <CartContentInfo>
-          <CartQuantityContent>
-            <p>Quantidade</p>
+        <section className="summaryItems">
+          <div>
+            <span>Quantidade</span>
             <span>{cartCount} itens</span>
-          </CartQuantityContent>
-          <CartPriceContent>
-            <p>Valor total</p>
-            <strong>R$ {formattedPrice}</strong>
-          </CartPriceContent>
+          </div>
 
-          <ButtonFinishCart onClick={handleTest} type="button">
-            Finalizar Compra
-          </ButtonFinishCart>
-        </CartContentInfo>
-      </CartContainer>
+          <div>
+            <strong>Valor total</strong>
+            <strong>{formattedPrice}</strong>
+          </div>
+          <Link href="CompleteOrder/">
+            <button
+              // onClick={handleTest}
+              disabled={isCreatingCheckoutSession || cartCount <= 0}
+            >
+              {isCreatingCheckoutSession ? (
+                <div>carregando</div>
+              ) : (
+                "Finalizar compra"
+              )}
+            </button>
+          </Link>
+
+          {/* <button
+            onClick={handleTest}
+            disabled={isCreatingCheckoutSession || cartCount <= 0}
+          >
+
+            
+
+            {isCreatingCheckoutSession ? (
+              <div>carregando</div>
+            ) : (
+              "Finalizar compra"
+            )}
+          </button> */}
+        </section>
+      </DialogContent>
     </Dialog.Portal>
   );
 }

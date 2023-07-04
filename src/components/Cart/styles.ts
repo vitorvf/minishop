@@ -1,108 +1,109 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import { styled } from "@stitches/react";
 
-export const CartContainer = styled(Dialog.Content, {
+export const DialogOverlay = styled(Dialog.Overlay, {
+  position: "fixed",
+  inset: 0,
+  backgroundColor: "transparent",
+});
+
+export const DialogContent = styled(Dialog.Content, {
+  display: "flex",
+  flexDirection: "column",
   position: "fixed",
   top: 0,
-  right: 0,
   bottom: 0,
-
-  width: "30rem",
-  padding: "4rem 3rem 3rem",
+  right: 0,
+  zIndex: 999,
   height: "100vh",
-
-  display: "flex",
-  flexDirection: "column",
-
-  background: "#202024",
+  maxWidth: "30rem",
+  width: "100%",
+  padding: "0 3rem 3rem",
+  backgroundColor: "white",
   boxShadow: "-4px 0px 30px rgba(0, 0, 0, 0.8)",
 
+  "& > button.closeButton": {
+    position: "absolute",
+    top: "1.5rem",
+    right: "1.5rem",
+    border: 0,
+    backgroundColor: "transparent",
+    display: "block",
+    lineHeight: 0,
+
+    svg: {
+      width: "1.5rem",
+      height: "1.5rem",
+      color: "$gray400",
+    },
+  },
+
   h2: {
-    fontSize: "$lg",
-    line: "2rem",
-    fontWeight: "bold",
-  },
-});
-
-export const ButtonClose = styled(Dialog.Close, {
-  position: "absolute",
-  color: "white",
-  top: 28,
-  right: "28px",
-  lineHeight: 0,
-  border: 0,
-  background: "transparent",
-  cursor: "pointer",
-
-  svg: {
-    width: 24,
-    height: 24,
-  },
-});
-
-export const CartContent = styled("div", {
-  marginTop: "2rem",
-
-  display: "flex",
-  flexDirection: "column",
-  gap: "1.5rem",
-  flex: "1 1 0%",
-  overflowY: "auto",
-});
-
-export const CartContentInfo = styled("div", {
-  marginBottom: "3.4375rem",
-});
-
-export const CartQuantityContent = styled("div", {
-  display: "flex",
-  justifyContent: "space-between",
-
-  "span, p": {
-    fontSize: "mg",
-    lineHeight: 1.8,
-  },
-});
-
-export const CartPriceContent = styled("div", {
-  display: "flex",
-  justifyContent: "space-between",
-
-  p: {
-    fontSize: "mg",
-    lineHeight: 1.6,
-    fontWeight: "bold",
+    fontSize: "1.25rem",
+    fontWeight: 700,
+    lineHeight: "160%",
+    color: "#192C53",
+    marginTop: "4.5rem",
+    marginBottom: "2rem",
   },
 
-  strong: {
-    fontSize: "$xl",
-    lineHeight: 1.4,
-    fontWeight: "bold",
-  },
-});
-
-export const ButtonFinishCart = styled("button", {
-  width: "100%",
-  height: 69,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-
-  border: 0,
-  color: "white",
-  fontSize: "$md",
-  fontWeight: "bold",
-  cursor: "pointer",
-  borderRadius: 8,
-  background: "#00875f",
-  transition: "0.2s",
-
-  "&:disabled": {
-    cursor: "not-allowed",
-    opacity: 0.6,
+  "& > .contentItems": {
+    marginBottom: "3rem",
+    display: "flex",
+    flexDirection: "column",
+    gap: "1.5rem",
+    maxHeight: "60vh",
+    overflowY: "auto",
   },
 
-  "&:not(:disabled):hover": {
-    backgroundColor: "$green300",
+  "& > .summaryItems": {
+    marginTop: "auto",
+
+    "& > div": {
+      display: "flex",
+      width: "100%",
+      justifyContent: "space-between",
+    },
+
+    span: {
+      fontSize: "1rem",
+      fontWeight: 400,
+      lineHeight: "160%",
+      color: "#192C53",
+    },
+
+    strong: {
+      fontSize: "$md",
+      fontWeight: 700,
+      lineHeight: "160%",
+      color: "#192C53",
+    },
+
+    button: {
+      marginTop: "3rem",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      width: "100%",
+
+      backgroundColor: "#192C53",
+      border: 0,
+      color: "white",
+      borderRadius: 8,
+      padding: "1.25rem",
+      minHeight: "4.25rem",
+      fontWeight: "bold",
+      fontSize: "$md",
+      transition: "background-color 0.4s",
+
+      "&:disabled": {
+        opacity: 0.6,
+        cursor: "not-allowed",
+      },
+
+      "&:not(:disabled):hover": {
+        backgroundColor: "#192C53",
+      },
+    },
   },
 });

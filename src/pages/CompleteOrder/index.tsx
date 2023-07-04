@@ -1,6 +1,6 @@
 import { CompleteOrderForm } from "./components/CompleteOrderForm";
 import { SelectedCoffees } from "./components/SelectedCoffees";
-import { CompleteOrderContainer } from "./styles";
+import { CompleteOrderContainer, OrderContainer } from "./styles";
 import { useForm, FormProvider } from "react-hook-form";
 import * as zod from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -53,14 +53,16 @@ export default function CompleteOrderPage() {
   }
 
   return (
-    <FormProvider {...confirmOrderForm}>
-      <CompleteOrderContainer
-        className="container"
-        onSubmit={handleSubmit(handleConfirmOrder)}
-      >
-        <CompleteOrderForm />
-        <SelectedCoffees />
-      </CompleteOrderContainer>
-    </FormProvider>
+    <OrderContainer>
+      <FormProvider {...confirmOrderForm}>
+        <CompleteOrderContainer
+          className="container"
+          onSubmit={handleSubmit(handleConfirmOrder)}
+        >
+          <CompleteOrderForm />
+          <SelectedCoffees />
+        </CompleteOrderContainer>
+      </FormProvider>
+    </OrderContainer>
   );
 }
