@@ -79,6 +79,7 @@
 // `;
 
 import { styled } from "@stitches/react";
+import React from "react";
 
 export const HeaderContainer = styled("header", {
   padding: "2rem 0",

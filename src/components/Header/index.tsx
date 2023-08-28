@@ -2,6 +2,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { useRouter } from "next/router";
 import { Bag } from "phosphor-react";
 import { useContext } from "react";
+import React from "react";
 
 import { ButtonCartContainer, HeaderContainer } from "./styles";
 import Image from "next/image";

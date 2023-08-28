@@ -7,6 +7,7 @@ import { DialogContent, DialogOverlay } from "./styles";
 import { CartContext } from "@/contexts/CartContext";
 import { formatMoney } from "@/utils/formatMoney";
 import Link from "next/link";
+import React from "react";
 
 export interface IProduct {
   id: string;

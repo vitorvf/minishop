@@ -1,5 +1,6 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import { styled } from "@stitches/react";
+import React from "react";
 
 export const DialogOverlay = styled(Dialog.Overlay, {
   position: "fixed",

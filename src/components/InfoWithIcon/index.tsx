@@ -1,5 +1,6 @@
 import { InfoWithIconContainer, IconContainer } from "./styles";
 import { ReactNode } from "react";
+import React from "react";
 
 interface BenefitItemProps {
   icon: ReactNode;

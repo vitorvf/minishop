@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import React from "react";
 
 export const OrderConfirmedContainer = styled.div`
   display: flex;
