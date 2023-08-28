@@ -48,10 +48,8 @@ export const getStaticProps: GetStaticProps = async () => {
       defaultPriceId: price.id,
       nickname: price.nickname,
       metadata: metadata,
-      // preco_antigo: p
     };
   });
-  // console.log(metadata);
 
   return {
     props: {

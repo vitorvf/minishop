@@ -185,7 +185,7 @@ export const SpanPrecoAvista = styled.span`
 
 export const Name = styled(TitleText).attrs({
   size: "s",
-  color: "gray",
+  color: "title",
 })`
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -193,7 +193,7 @@ export const Name = styled(TitleText).attrs({
 
 export const Description = styled(RegularText).attrs({
   size: "s",
-  color: "gray",
+  color: "subtitle",
 })`
   margin-bottom: 2rem;
 `;

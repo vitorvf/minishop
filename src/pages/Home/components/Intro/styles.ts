@@ -30,6 +30,7 @@ export const IntroContent = styled.div`
 `;
 
 export const IntroTitle = styled(TitleText)`
+  font-family: "Roboto";
   margin-bottom: 1rem;
 `;
 

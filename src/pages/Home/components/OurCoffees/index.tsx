@@ -21,18 +21,18 @@ export default function OurCoffees({ products }: OurCoffeesProps) {
   return (
     <OurCoffeesContainer className="container">
       <TitleText size="l" color="subtitle">
-        Nossos cafés
+        Nossos Produtos
       </TitleText>
 
       <CoffeeList>
         {products.map((product) => (
-          // <Link
-          //   href={`/product/${product.id}`}
-          //   key={product.id}
-          //   prefetch={false}
-          // >
-          <CoffeeCard key={product.id} product={product} />
-          // </Link>
+          <Link
+            href={`/product/${product.id}`}
+            key={product.id}
+            prefetch={false}
+          >
+            <CoffeeCard key={product.id} product={product} />
+          </Link>
         ))}
       </CoffeeList>
     </OurCoffeesContainer>

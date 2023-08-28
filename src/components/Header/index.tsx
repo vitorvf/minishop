@@ -24,6 +24,10 @@ export function Header() {
 
       <Dialog.Root>
         <Dialog.Trigger asChild>
+          {/* <ButtonCartContainer>
+            <Bag weight="bold" />
+            <span>{cartCount}</span>
+          </ButtonCartContainer> */}
           <ButtonCartContainer>
             <Bag weight="bold" />
             <span>{cartCount}</span>
@@ -31,8 +35,6 @@ export function Header() {
         </Dialog.Trigger>
         <Cart />
       </Dialog.Root>
-
-      <Link href="CompleteOrder/">CLICK</Link>
     </HeaderContainer>
   );
 }

@@ -6,7 +6,7 @@ export const CardCartContainer = styled("div", {
 });
 
 export const ImageCardCartContainer = styled("div", {
-  background: "linear-gradient(180deg, #1EA483 0%, #7465D4 100%)",
+  // background: "linear-gradient(180deg, #1EA483 0%, #7465D4 100%)",
   borderRadius: 8,
   maxWidth: 101,
   height: 93,
@@ -59,7 +59,7 @@ export const ImageContainer = styled("div", {
   width: "100%",
   maxWidth: 102,
   height: 93,
-  backgroundImage: "linear-gradient(180deg, #1ea483 0%, #7465d4 100%)",
+  // backgroundImage: "linear-gradient(180deg, #1ea483 0%, #7465d4 100%)",
   borderRadius: 8,
   padding: "0.25rem",
 
@@ -69,6 +69,7 @@ export const ImageContainer = styled("div", {
 
   img: {
     objectFit: "cover",
+    borderRadius: "7px",
   },
 });
 
@@ -110,7 +111,7 @@ export const InfoContainer = styled("div", {
     "button.removeButton": {
       border: 0,
       borderRadius: 6,
-      backgroundColor: "$gray700",
+      backgroundColor: "#E6E5E5",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
@@ -124,7 +125,7 @@ export const InfoContainer = styled("div", {
 
       "&:hover": {
         color: "$green300",
-        backgroundColor: "$gray600",
+        backgroundColor: "#f4f4f4",
       },
     },
   },

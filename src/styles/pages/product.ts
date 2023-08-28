@@ -10,11 +10,22 @@ export const ProductContainer = styled("main", {
   margin: "0 auto",
 });
 
+export const PriceAntes = styled("div", {
+  textDecoration: "line-through",
+  fontSize: "12px",
+  fontWeight: "600",
+  color: "#747474",
+  // text-decoration: line-through;
+  //   font-size: 12px;
+  //   font-weight: 500;
+  //   color: #747474;
+});
+
 export const ImageContainer = styled("div", {
-  width: "100%",
-  maxWidth: 576,
-  height: "calc(656px - 0.5rem)",
-  background: "linear-gradient(180deg, #1ea483 0%, #7465d4 100%)",
+  // width: "100%",
+  // maxWidth: 576,
+  // height: 656,
+  // background: "linear-gradient(180deg, #1ea483 0%, #7465d4 100%)",
   borderRadius: 8,
   padding: "0.25rem",
 
@@ -24,6 +35,7 @@ export const ImageContainer = styled("div", {
 
   img: {
     objectFit: "cover",
+    borderRadius: "8px",
   },
 });
 
@@ -32,29 +44,29 @@ export const ProductDetails = styled("div", {
   flexDirection: "column",
 
   h1: {
-    fontSize: "$2xl",
-    color: "$gray300",
+    fontSize: "2rem",
+    color: "#747474",
   },
 
   span: {
     marginTop: "1rem",
     display: "block",
-    fontSize: "$2xl",
-    color: "$green300",
+    fontSize: "2rem",
+    color: "#747474",
   },
 
   p: {
     marginTop: "2.5rem",
     fontSize: "$md",
     lineHeight: 1.6,
-    color: "$gray300",
+    color: "#747474",
   },
 
   button: {
     marginTop: "auto",
-    backgroundColor: "$green500",
+    backgroundColor: "#192c53",
     border: 0,
-    color: "$white",
+    color: "white",
     borderRadius: 8,
     padding: "1.25rem",
     cursor: "pointer",
@@ -67,7 +79,7 @@ export const ProductDetails = styled("div", {
     },
 
     "&:not(:disabled):hover": {
-      backgroundColor: "$green300",
+      backgroundColor: "#0b0b1f",
     },
   },
 });

@@ -18,7 +18,7 @@ export const QuantityInputContainer = styled.div<QuantityInputContainerProps>`
     width: 100%;
     background: none;
     border: none;
-    color: ${({ theme }) => theme.colors["base-white"]};
+    color: ${({ theme }) => theme.colors["base-black"]};
 
     &:focus {
       outline: none;
@@ -45,7 +45,7 @@ export const IconWrapper = styled.button.attrs({
   height: 0.875rem;
   border: none;
   background: none;
-  color: ${({ theme }) => theme.colors["brand-green-300"]};
+  color: ${({ theme }) => theme.colors["base-blue"]};
   transition: 0.4s;
 
   &:disabled {
@@ -53,6 +53,6 @@ export const IconWrapper = styled.button.attrs({
   }
 
   &:not(:disabled):hover {
-    color: ${({ theme }) => theme.colors["brand-green-200"]};
+    color: ${({ theme }) => theme.colors["base-blue-hover"]};
   }
 `;

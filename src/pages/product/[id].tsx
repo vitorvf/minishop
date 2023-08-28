@@ -7,8 +7,13 @@ import { stripe } from "../../lib/stripe";
 
 import Image from "next/image";
 import { DeviceTablet } from "phosphor-react";
-// import { ProductContainer, ProductDetails } from "@/styles/pages/product";
-// import { ImagesContainer } from "@/styles/pages/success";
+import {
+  ImageContainer,
+  PriceAntes,
+  ProductContainer,
+  ProductDetails,
+} from "@/styles/pages/product";
+import { PriceBefore } from "../Home/components/CoffeeCard/styles";
 
 interface ProductProps {
   product: {
@@ -18,12 +23,15 @@ interface ProductProps {
     price: string;
     description: string;
     defaultPriceId: string;
+    metadata: string;
   };
 }
 
 export default function Product({ product }: ProductProps) {
   const [isCreatingCheckoutSession, setIsCreatingCheckoutSession] =
     useState(false);
+
+  const precoantigo = product.metadata;
 
   async function handleBuyButton() {
     try {
@@ -51,16 +59,18 @@ export default function Product({ product }: ProductProps) {
   return (
     <>
       <Head>
-        <title>{product.name} | Ignite Shop</title>
+        {" "}
+        <title>{product.name} | Shirt Shop</title>{" "}
       </Head>
 
-      <div>
-        <div>
+      <ProductContainer>
+        <ImageContainer>
           <Image src={product.imageUrl} width={520} height={480} alt="" />
-        </div>
+        </ImageContainer>
 
-        <div>
-          <h1>product name</h1>
+        <ProductDetails>
+          <h1>{product.name}</h1>
+
           <span>{product.price}</span>
 
           <p>{product.description}</p>
@@ -71,8 +81,8 @@ export default function Product({ product }: ProductProps) {
           >
             Comprar agora
           </button>
-        </div>
-      </div>
+        </ProductDetails>
+      </ProductContainer>
     </>
   );
 }
@@ -102,6 +112,7 @@ export const getStaticProps: GetStaticProps<any, { id: string }> = async ({
   });
 
   const price = product.default_price as Stripe.Price;
+  const metadata = product.metadata?.precoantigo || "";
 
   return {
     props: {
@@ -118,6 +129,7 @@ export const getStaticProps: GetStaticProps<any, { id: string }> = async ({
         numberPrice: price.unit_amount ? price.unit_amount / 100 : 0,
         description: product.description,
         defaultPriceId: price.id,
+        metadata: metadata,
       },
     },
     revalidate: 60 * 60 * 1, // 1 hour

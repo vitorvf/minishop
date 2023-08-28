@@ -48,7 +48,9 @@ export function CardCart({
             onDecrease={handleDecrease}
             onIncrease={handleIncrease}
           />
-          <button className="removeButton">Remover</button>
+          <button onClick={handleRemoveFromCart} className="removeButton">
+            Remover
+          </button>
         </div>
       </S.InfoContainer>
     </S.CartItemContainer>

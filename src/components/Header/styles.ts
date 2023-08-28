@@ -93,7 +93,7 @@ export const HeaderContainer = styled("header", {
 export const ButtonCartContainer = styled("button", {
   borderRadius: 6,
   border: 0,
-  background: "$gray800",
+  background: "#efeeee",
   padding: 12,
   display: "flex",
   alignItems: "center",
@@ -110,18 +110,19 @@ export const ButtonCartContainer = styled("button", {
 
   span: {
     position: "absolute",
-    width: "1.6rem",
-    height: "1.6rem",
+    width: "1.4rem",
+    height: "1.4rem",
     right: -7,
     top: -7,
     borderRadius: "50%",
     border: "3px solid #121214",
-    background: "$green500",
+    background: "#121135",
     display: "flex",
+    color: "white",
     alignItems: "center",
     justifyContent: "center",
 
-    fontSize: "0.875rem",
+    fontSize: "13px",
     fontWeight: "bold",
   },
 });

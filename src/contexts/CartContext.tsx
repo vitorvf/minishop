@@ -11,7 +11,7 @@ export interface IProduct {
   quantity?: number;
 }
 
-interface CartContextType {
+export interface CartContextType {
   addToCart: (product: IProduct, quantity: number) => void;
   removeProductCart: (productId: string) => void;
   totalPrice: number;

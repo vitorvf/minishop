@@ -11,9 +11,9 @@ import { useContext } from "react";
 import { CartContext } from "../../../../contexts/CartContext";
 import Image from "next/image";
 
-interface CoffeeCartCardProps {
-  coffee: CartItem;
-}
+// interface CoffeeCartCardProps {
+//   coffee: CartItem;
+// }
 
 export function CoffeeCartCard({ product }: any) {
   const coffeeTotal = product.price * product.quantity;

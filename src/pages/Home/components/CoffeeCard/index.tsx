@@ -45,14 +45,9 @@ interface CoffeeProps {
 }
 
 export function CoffeeCard({ product }: any) {
-  console.log(product);
   const { cartItems } = useCart();
   // console.log(cartItems);
-  function handleAddToCart(
-    event: MouseEvent<HTMLButtonElement>,
-    products: any,
-    quantity: number
-  ) {
+  function handleAddToCart(event: any, products: any, quantity: number) {
     event.preventDefault();
     addToCart(product, quantity);
   }
@@ -135,7 +130,11 @@ export function CoffeeCard({ product }: any) {
       </Description> */}
 
       <ProductAction>
-        <ButtonAction onClick={(event) => handleAddToCart(event, product, 1)}>
+        <ButtonAction
+          onClick={(event: React.MouseEvent<HTMLButtonElement>) =>
+            handleAddToCart(event, product, 1)
+          }
+        >
           {/* <ShoppingCart weight="fill" size={20} /> */}
           <FontAwesomeIcon icon={faCartPlus} />
           Adicionar

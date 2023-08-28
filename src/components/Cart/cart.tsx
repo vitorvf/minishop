@@ -86,9 +86,10 @@ export function Cart() {
             <strong>Valor total</strong>
             <strong>{formattedPrice}</strong>
           </div>
-          <Link href="CompleteOrder/">
+
+          <Dialog.Close asChild>
             <button
-              // onClick={handleTest}
+              onClick={handleTest}
               disabled={isCreatingCheckoutSession || cartCount <= 0}
             >
               {isCreatingCheckoutSession ? (
@@ -97,7 +98,7 @@ export function Cart() {
                 "Finalizar compra"
               )}
             </button>
-          </Link>
+          </Dialog.Close>
 
           {/* <button
             onClick={handleTest}
