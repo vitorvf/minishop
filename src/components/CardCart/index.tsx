@@ -3,6 +3,7 @@ import { QuantityInput } from "../QuantityInput";
 import * as S from "./styles";
 import { useContext } from "react";
 import Image from "next/image";
+import React from "react";
 
 export interface Products {
   id: string;

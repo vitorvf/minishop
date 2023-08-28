@@ -4,6 +4,7 @@ import Head from "next/head";
 import { useState } from "react";
 import Stripe from "stripe";
 import { stripe } from "../../lib/stripe";
+import React from "react";
 
 import Image from "next/image";
 import { DeviceTablet } from "phosphor-react";

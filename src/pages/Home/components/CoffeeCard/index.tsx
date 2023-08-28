@@ -1,5 +1,7 @@
 import { QuantityInput } from "../../../../components/QuantityInput";
 import { RegularText, TitleText } from "../../../../components/Typography";
+import React from "react";
+
 import {
   CoffeeCardContainer,
   Tags,

@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useState } from "react";
+import React from "react";
 
 export interface IProduct {
   id: string;

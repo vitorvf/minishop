@@ -1,4 +1,5 @@
 import { styled } from "@stitches/react";
+import React from "react";
 
 export const SuccessContainer = styled("main", {
   display: "flex",

@@ -3,6 +3,7 @@ import { CoffeeList, OurCoffeesContainer } from "./styles";
 import { TitleText } from "@/components/Typography";
 import { CoffeeCard } from "../CoffeeCard";
 import Link from "next/link";
+import React from "react";
 
 interface Product {
   id: string;

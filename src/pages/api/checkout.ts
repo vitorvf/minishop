@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 // import { IProduct } from "../../contexts/CartContext";
 import { stripe } from "../../lib/stripe";
+import React from "react";
 
 export interface IProduct {
   id: string;

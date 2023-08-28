@@ -10,6 +10,7 @@ import {
   IntroContent,
   IntroTitle,
 } from "./styles";
+import React from "react";
 
 export function Intro() {
   const { colors } = useTheme();

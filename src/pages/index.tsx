@@ -4,6 +4,7 @@ import Stripe from "stripe";
 import { HomeContainer, LayoutContainer } from "./Home/styles";
 import OurCoffees from "./Home/components/OurCoffees";
 import { Intro } from "./Home/components/Intro";
+import React from "react";
 
 interface Product {
   id: string;

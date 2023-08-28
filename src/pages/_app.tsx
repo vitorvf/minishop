@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import type { AppProps } from "next/app";
 import { GlobalStyle } from "@/styles/global";
 import { DefaultLayout } from "@/layouts/DefaultLayout";
+import React from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
