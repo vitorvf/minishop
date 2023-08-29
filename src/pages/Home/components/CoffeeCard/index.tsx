@@ -46,7 +46,7 @@ interface CoffeeProps {
   coffee: Coffee;
 }
 
-export function CoffeeCard({ product }: any) {
+export default function CoffeeCard({ product }: any) {
   const { cartItems } = useCart();
   // console.log(cartItems);
   function handleAddToCart(event: any, products: any, quantity: number) {
