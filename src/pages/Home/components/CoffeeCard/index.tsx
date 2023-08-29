@@ -1,7 +1,3 @@
-import { QuantityInput } from "../../../../components/QuantityInput";
-import { RegularText, TitleText } from "../../../../components/Typography";
-import React from "react";
-
 import {
   CoffeeCardContainer,
   Tags,
@@ -67,12 +63,6 @@ export default function CoffeeCard({ product }: any) {
     setQuantity((state) => state - 1);
   }
 
-  // function handleAddToCart() {
-  //   addToCart(coffee, quantity);
-  // }
-
-  // const formattedPrice = formatMoney(coffee.price);
-  // Tamanho de imagem 120
   return (
     <CoffeeCardContainer>
       <ImageCard>
@@ -127,10 +117,6 @@ export default function CoffeeCard({ product }: any) {
         </span>
       </DivSpan>
 
-      {/* <Description>
-        Expresso diluído, menos intenso que o tradicional
-      </Description> */}
-
       <ProductAction>
         <ButtonAction
           onClick={(event: React.MouseEvent<HTMLButtonElement>) =>
@@ -142,27 +128,6 @@ export default function CoffeeCard({ product }: any) {
           Adicionar
         </ButtonAction>
       </ProductAction>
-      {/* <CardFooter>
-        <div>
-          <RegularText color="gray" size="s">
-            R$
-          </RegularText>
-          <TitleText size="m" color="gray" as="strong">
-            {priceWithoutPrefix}
-          </TitleText>
-        </div>
-
-        <AddCartWrapper>
-          <QuantityInput
-            onIncrease={handleIncrease}
-            onDecrease={handleDecrease}
-            quantity={quantity}
-          />
-          <button onClick={(event) => handleAddToCart(event, product, 1)}>
-            <ShoppingCart weight="fill" size={22} />
-          </button>
-        </AddCartWrapper>
-      </CardFooter> */}
     </CoffeeCardContainer>
   );
 }
