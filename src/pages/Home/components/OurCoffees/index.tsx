@@ -1,8 +1,8 @@
 import React from "react";
 import { CoffeeList, OurCoffeesContainer } from "./styles";
 import { TitleText } from "@/components/Typography";
-import { CoffeeCard } from "../CoffeeCard";
 import Link from "next/link";
+import CoffeeCard from "../CoffeeCard";
 
 interface Product {
   id: string;
