@@ -2,12 +2,12 @@ import * as Dialog from "@radix-ui/react-dialog";
 import axios from "axios";
 import { X } from "phosphor-react";
 import { useContext, useState } from "react";
-import { CardCart } from "../CardCart";
 import { DialogContent, DialogOverlay } from "./styles";
 import { CartContext } from "@/contexts/CartContext";
 import { formatMoney } from "@/utils/formatMoney";
 import Link from "next/link";
 import React from "react";
+import CardCart from "../CardCart";
 
 export interface IProduct {
   id: string;

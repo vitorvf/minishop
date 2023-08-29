@@ -8,8 +8,7 @@ import { ButtonCartContainer, HeaderContainer } from "./styles";
 import Image from "next/image";
 
 import { CartContext } from "@/contexts/CartContext";
-import { Cart } from "../Cart/cart";
-import Link from "next/link";
+import Cart from "../Cart/cart";
 
 export default function Header() {
   const { pathname } = useRouter();
