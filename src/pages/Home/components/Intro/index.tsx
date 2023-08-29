@@ -2,7 +2,9 @@ import introImg from "../../../../assets/intro-img.png";
 import { ShoppingCart, Package, Timer, Coffee, Alarm } from "phosphor-react";
 import { useTheme } from "styled-components";
 import { RegularText } from "../../../../components/Typography";
-import { InfoWithIcon } from "../../../../components/InfoWithIcon";
+
+import React from "react";
+import InfoWithIcon from "@/components/InfoWithIcon";
 import Image from "next/image";
 import {
   BenefitsContainer,
@@ -10,7 +12,6 @@ import {
   IntroContent,
   IntroTitle,
 } from "./styles";
-import React from "react";
 
 export default function Intro() {
   const { colors } = useTheme();
