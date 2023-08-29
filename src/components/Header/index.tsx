@@ -11,7 +11,7 @@ import { CartContext } from "@/contexts/CartContext";
 import { Cart } from "../Cart/cart";
 import Link from "next/link";
 
-export function Header() {
+export default function Header() {
   const { pathname } = useRouter();
   // const { cartCount } = useShoppingCart();
   const { cartItems } = useContext(CartContext);

@@ -20,7 +20,7 @@ export interface IProduct {
   quantity?: number;
 }
 
-export function Cart() {
+export default function Cart() {
   const { cartItems, removeProductCart, totalPrice } = useContext(CartContext);
 
   const cartCount = cartItems.length;

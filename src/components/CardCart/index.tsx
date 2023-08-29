@@ -1,9 +1,9 @@
 import { CartContext } from "@/contexts/CartContext";
-import { QuantityInput } from "../QuantityInput";
 import * as S from "./styles";
 import { useContext } from "react";
 import Image from "next/image";
 import React from "react";
+import QuantityInput from "../QuantityInput";
 
 export interface Products {
   id: string;
@@ -14,7 +14,7 @@ export interface Products {
   removeProductCart: (id: string) => void; // Adicione o parâmetro 'id' aqui
 }
 
-export function CardCart({
+export default function CardCart({
   name,
   price,
   imageUrl,

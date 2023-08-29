@@ -12,7 +12,7 @@ import {
 } from "./styles";
 import React from "react";
 
-export function Intro() {
+export default function Intro() {
   const { colors } = useTheme();
 
   return (

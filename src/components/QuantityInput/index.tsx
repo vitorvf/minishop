@@ -9,7 +9,7 @@ interface QuantityInputProps {
   onDecrease: () => void;
 }
 
-export function QuantityInput({
+export default function QuantityInput({
   onIncrease,
   onDecrease,
   quantity,

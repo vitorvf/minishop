@@ -26,7 +26,9 @@ interface CartContextProviderProps {
 
 export const CartContext = createContext({} as CartContextType);
 
-export function CartContextProvider({ children }: CartContextProviderProps) {
+export default function CartContextProvider({
+  children,
+}: CartContextProviderProps) {
   const [cartItems, setCartItems] = useState<IProduct[]>([]);
 
   //Valor total do Carrinho

@@ -8,7 +8,7 @@ interface BenefitItemProps {
   iconBg: string;
 }
 
-export function InfoWithIcon({ icon, text, iconBg }: BenefitItemProps) {
+export default function InfoWithIcon({ icon, text, iconBg }: BenefitItemProps) {
   return (
     <InfoWithIconContainer>
       <IconContainer iconBg={iconBg}>{icon}</IconContainer>

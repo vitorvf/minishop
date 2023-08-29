@@ -1,11 +1,11 @@
 import OurCoffees from "@/pages/Home/components/OurCoffees";
-import { Header } from "../../components/Header";
 import { LayoutContainer } from "./styles";
 import Home from "@/pages";
 // import { Outlet } from "react-router-dom";
 import React from "react";
+import Header from "@/components/Header";
 
-export function DefaultLayout() {
+export default function DefaultLayout() {
   return (
     <LayoutContainer>
       <Header />
