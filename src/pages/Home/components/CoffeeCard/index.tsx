@@ -22,10 +22,10 @@ import { ShoppingCart } from "phosphor-react";
 import { MouseEvent, useContext, useState } from "react";
 import { formatMoney } from "../../../../utils/formatMoney";
 import { CartContext } from "../../../../contexts/CartContext";
-import Image from "next/image";
-import { useCart } from "@/hooks/useCart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import { useCart } from "@/src/hooks/useCart";
+import Image from "next/image";
 
 export interface Coffee {
   id: number;
@@ -63,6 +63,12 @@ export default function CoffeeCard({ product }: any) {
     setQuantity((state) => state - 1);
   }
 
+  // function handleAddToCart() {
+  //   addToCart(coffee, quantity);
+  // }
+
+  // const formattedPrice = formatMoney(coffee.price);
+  // Tamanho de imagem 120
   return (
     <CoffeeCardContainer>
       <ImageCard>
@@ -116,6 +122,10 @@ export default function CoffeeCard({ product }: any) {
           <span> desconto via PIX </span>
         </span>
       </DivSpan>
+
+      {/* <Description>
+        Expresso diluído, menos intenso que o tradicional
+      </Description> */}
 
       <ProductAction>
         <ButtonAction

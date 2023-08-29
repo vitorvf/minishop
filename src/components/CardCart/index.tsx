@@ -1,9 +1,9 @@
-import { CartContext } from "@/contexts/CartContext";
 import * as S from "./styles";
 import { useContext } from "react";
 import Image from "next/image";
 import React from "react";
 import QuantityInput from "../QuantityInput";
+import { CartContext } from "@/src/contexts/CartContext";
 
 export interface Products {
   id: string;

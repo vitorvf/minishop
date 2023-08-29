@@ -1,10 +1,10 @@
-import { CartContextProvider } from "@/contexts/CartContext";
-import { defaultTheme } from "@/styles/themes/default";
-import { ThemeProvider } from "styled-components";
-import type { AppProps } from "next/app";
-import { GlobalStyle } from "@/styles/global";
-import { DefaultLayout } from "@/layouts/DefaultLayout";
 import React from "react";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle } from "../styles/global";
+import CartContextProvider from "../contexts/CartContext";
+import DefaultLayout from "../layouts/DefaultLayout";
+import { defaultTheme } from "../styles/themes/default";
+import { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

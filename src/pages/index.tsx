@@ -1,10 +1,11 @@
 import { GetStaticProps } from "next";
-import { stripe } from "@/lib/stripe";
-import Stripe from "stripe";
+
 import { HomeContainer, LayoutContainer } from "./Home/styles";
 import OurCoffees from "./Home/components/OurCoffees";
-import { Intro } from "./Home/components/Intro";
 import React from "react";
+import Intro from "./Home/components/Intro";
+import { stripe } from "../lib/stripe";
+import Stripe from "stripe";
 
 interface Product {
   id: string;

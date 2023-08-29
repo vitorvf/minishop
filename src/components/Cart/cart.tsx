@@ -3,11 +3,11 @@ import axios from "axios";
 import { X } from "phosphor-react";
 import { useContext, useState } from "react";
 import { DialogContent, DialogOverlay } from "./styles";
-import { CartContext } from "@/contexts/CartContext";
-import { formatMoney } from "@/utils/formatMoney";
-import Link from "next/link";
+ import Link from "next/link";
 import React from "react";
 import CardCart from "../CardCart";
+import { CartContext } from "@/src/contexts/CartContext";
+import { formatMoney } from "@/src/utils/formatMoney";
 
 export interface IProduct {
   id: string;
@@ -20,7 +20,7 @@ export interface IProduct {
   quantity?: number;
 }
 
-export default function Cart() {
+export function Cart() {
   const { cartItems, removeProductCart, totalPrice } = useContext(CartContext);
 
   const cartCount = cartItems.length;

@@ -4,14 +4,14 @@ import { useTheme } from "styled-components";
 import { RegularText } from "../../../../components/Typography";
 
 import React from "react";
-import InfoWithIcon from "@/components/InfoWithIcon";
-import Image from "next/image";
-import {
+ import {
   BenefitsContainer,
   IntroContainer,
   IntroContent,
   IntroTitle,
 } from "./styles";
+import InfoWithIcon from "@/src/components/InfoWithIcon";
+import Image from "next/image";
 
 export default function Intro() {
   const { colors } = useTheme();

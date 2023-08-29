@@ -1,6 +1,6 @@
 import React from "react";
 import { CoffeeList, OurCoffeesContainer } from "./styles";
-import { TitleText } from "@/components/Typography";
+import { TitleText } from "@/src/components/Typography";
 import Link from "next/link";
 import CoffeeCard from "../CoffeeCard";
 
