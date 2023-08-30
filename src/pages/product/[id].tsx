@@ -8,10 +8,7 @@ import React from "react";
 
 import Image from "next/image";
 import { DeviceTablet } from "phosphor-react";
-
-import { PriceBefore } from "../Home/components/CoffeeCard/styles";
-import { ProductContainer, ProductDetails } from "@/src/styles/pages/product";
-import { ImageContainer } from "@/src/components/CardCart/styles";
+import { ImageContainer, ProductContainer, ProductDetails } from "@/src/styles/pages/product";
 
 interface ProductProps {
   product: {

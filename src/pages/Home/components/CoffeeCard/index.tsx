@@ -17,7 +17,7 @@ import {
   Personalize,
   SpanPrecoAvista,
   DivSpan,
-} from "./styles";
+} from "../../../../styles/outhers/coffecard";
 import { ShoppingCart } from "phosphor-react";
 import { MouseEvent, useContext, useState } from "react";
 import { formatMoney } from "../../../../utils/formatMoney";
@@ -79,15 +79,10 @@ export default function CoffeeCard({ product }: any) {
         <Lancamento>Lançamento</Lancamento>
         <Personalize>Personalize</Personalize>
       </DivTags>
-      {/* <Tags> */}
-      {/* {product.tags.map((tag) => (
-          <span key={`${product.id}${tag}`}>{tag}</span>
-        ))} */}
-      {/* <span>teste tag</span>
-      </Tags> */}
+      
 
       <CardName>
-        {/* <Name>{product.name}</Name> */}
+        
         {product.name}
       </CardName>
       <Price>
@@ -123,9 +118,7 @@ export default function CoffeeCard({ product }: any) {
         </span>
       </DivSpan>
 
-      {/* <Description>
-        Expresso diluído, menos intenso que o tradicional
-      </Description> */}
+     
 
       <ProductAction>
         <ButtonAction
@@ -133,7 +126,7 @@ export default function CoffeeCard({ product }: any) {
             handleAddToCart(event, product, 1)
           }
         >
-          {/* <ShoppingCart weight="fill" size={20} /> */}
+         
           <FontAwesomeIcon icon={faCartPlus} />
           Adicionar
         </ButtonAction>

@@ -1,6 +1,9 @@
 import { GetStaticProps } from "next";
 
-import { HomeContainer, LayoutContainer } from "./Home/styles";
+import {
+  HomeContainer,
+  LayoutContainer,
+} from "../styles/outhers/homecomponente";
 import OurCoffees from "./Home/components/OurCoffees";
 import React from "react";
 import Intro from "./Home/components/Intro";
