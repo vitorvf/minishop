@@ -27,8 +27,10 @@ interface ProductProps {
 }
 
 export default function Product({ product }: ProductProps) {
-  const [isCreatingCheckoutSession, setIsCreatingCheckoutSession] =
-    useState(false);
+  const [isCreatingCheckoutSession, setIsCreatingCheckoutSession] = useState(false);
+  if (!product || !product.name) {
+    return <div>Produto não encontrado</div>;
+  }
 
   async function handleBuyButton() {
     try {
@@ -62,7 +64,7 @@ export default function Product({ product }: ProductProps) {
 
       <ProductContainer>
         <ImageContainer>
-          <Image src={product.imageUrl} width={520} height={480} alt="" />
+          <Image src={product.imageUrl ? product.imageUrl : 'Não asjidasji'} width={520} height={480} alt="" />
         </ImageContainer>
 
         <ProductDetails>
@@ -104,16 +106,15 @@ export const getStaticProps: GetStaticProps<any, { id: string }> = async ({
     };
   }
 
-  const product = await stripe.products.retrieve(productId, {
+  const product = await stripe.products?.retrieve(productId, {
     expand: ["default_price"],
   });
 
   const price = product.default_price as Stripe.Price;
   const metadata = product.metadata?.precoantigo || "";
-
-  return {
-    props: {
-      product: {
+    return {
+      props: {
+        product: {
         id: product.id,
         name: product.name,
         imageUrl: product.images[0],
@@ -130,5 +131,5 @@ export const getStaticProps: GetStaticProps<any, { id: string }> = async ({
       },
     },
     revalidate: 60 * 60 * 1, // 1 hour
-  };
+  }
 };

@@ -55,6 +55,10 @@ export default function CoffeeCard({ product }: any) {
   const [quantity, setQuantity] = useState(1);
   const { addToCart } = useContext(CartContext);
 
+  if (!product || !product.imageUrl) {
+    return <div>Produto não encontrado</div>;
+  }
+
   function handleIncrease() {
     setQuantity((state) => state + 1);
   }
