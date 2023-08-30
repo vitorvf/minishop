@@ -50,8 +50,8 @@ export default function CoffeeCard({ product }: any) {
     addToCart(product, quantity);
   }
 
-  const priceWithoutPrefix = product.price.replace("R$", "").trim();
-  const precoantigo = product.metadata;
+  const priceWithoutPrefix = product?.price.replace("R$", "").trim();
+  const precoantigo = product?.metadata || "";
   const [quantity, setQuantity] = useState(1);
   const { addToCart } = useContext(CartContext);
 
@@ -79,19 +79,24 @@ export default function CoffeeCard({ product }: any) {
         <Lancamento>Lançamento</Lancamento>
         <Personalize>Personalize</Personalize>
       </DivTags>
-      
 
-      <CardName>
-        
-        {product.name}
-      </CardName>
+      <CardName>{product.name}</CardName>
       <Price>
         <PriceBefore>
           R$<span>{precoantigo}</span>
         </PriceBefore>
 
         <PriceNow>
-          <span content="R$129.90">R${priceWithoutPrefix}</span>
+          <span content="R$129.90">
+            R$
+            {product?.price ? (
+              <span content={`R$${priceWithoutPrefix}`}>
+                R${priceWithoutPrefix}
+              </span>
+            ) : (
+              <span>Price Not Available</span>
+            )}
+          </span>
         </PriceNow>
       </Price>
 
@@ -118,15 +123,12 @@ export default function CoffeeCard({ product }: any) {
         </span>
       </DivSpan>
 
-     
-
       <ProductAction>
         <ButtonAction
           onClick={(event: React.MouseEvent<HTMLButtonElement>) =>
             handleAddToCart(event, product, 1)
           }
         >
-         
           <FontAwesomeIcon icon={faCartPlus} />
           Adicionar
         </ButtonAction>

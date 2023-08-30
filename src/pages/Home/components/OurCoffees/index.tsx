@@ -1,5 +1,8 @@
 import React from "react";
-import { CoffeeList, OurCoffeesContainer } from "../../../../styles/outhers/ourcoffees";
+import {
+  CoffeeList,
+  OurCoffeesContainer,
+} from "../../../../styles/outhers/ourcoffees";
 import { TitleText } from "@/src/components/Typography";
 import Link from "next/link";
 import CoffeeCard from "../CoffeeCard";
@@ -25,7 +28,7 @@ export default function OurCoffees({ products }: OurCoffeesProps) {
       </TitleText>
 
       <CoffeeList>
-        {products.map((product) => (
+        {products?.map((product) => (
           <Link
             href={`/product/${product.id}`}
             key={product.id}

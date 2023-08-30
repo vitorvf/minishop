@@ -8,7 +8,11 @@ import React from "react";
 
 import Image from "next/image";
 import { DeviceTablet } from "phosphor-react";
-import { ImageContainer, ProductContainer, ProductDetails } from "@/src/styles/pages/product";
+import {
+  ImageContainer,
+  ProductContainer,
+  ProductDetails,
+} from "@/src/styles/pages/product";
 
 interface ProductProps {
   product: {
@@ -25,8 +29,6 @@ interface ProductProps {
 export default function Product({ product }: ProductProps) {
   const [isCreatingCheckoutSession, setIsCreatingCheckoutSession] =
     useState(false);
-
-  const precoantigo = product.metadata;
 
   async function handleBuyButton() {
     try {
@@ -83,7 +85,7 @@ export default function Product({ product }: ProductProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = [{ params: { id: "prod_MO0C3yNu4UBp9p" } }];
+  const paths = [{ params: { id: "prod_OXyiBd3O7aHTxr" } }];
 
   return {
     paths,
