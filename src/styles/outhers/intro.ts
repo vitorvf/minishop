@@ -20,6 +20,20 @@ export const IntroContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 480px) {
+    img {
+      display: none;
+    }
+    text-align: center;
+  }
+
+  @media screen and (min-width: 513px) and (max-width: 613px) {
+    img {
+      display: none;
+    }
+    text-align: center;
+  }
 `;
 
 export const IntroContent = styled.div`
@@ -33,6 +47,14 @@ export const IntroContent = styled.div`
 export const IntroTitle = styled(TitleText)`
   font-family: "Roboto";
   margin-bottom: 1rem;
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (min-width: 513px) and (max-width: 613px) {
+    font-size: 2rem;
+  }
 `;
 
 export const BenefitsContainer = styled.div`
@@ -41,4 +63,14 @@ export const BenefitsContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   row-gap: 1.25rem;
   margin-top: 4.125rem;
+
+  @media (max-width: 480px) {
+    grid-template-columns: none;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 513px) and (max-width: 613px) {
+    grid-template-columns: none;
+    justify-content: center;
+  }
 `;
