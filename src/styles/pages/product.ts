@@ -88,11 +88,11 @@ export const ProductDetails = styled("div", {
     fontSize: "$md",
 
     "@media (max-width: 480px)": {
-      marginTop: "26px",
+      marginTop: "14px",
     },
 
     "@media (min-width: 513px) and (max-width: 613px)": {
-      marginTop: "26px",
+      marginTop: "14px",
     },
 
     "&:disabled": {

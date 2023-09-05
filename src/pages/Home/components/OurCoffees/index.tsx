@@ -24,7 +24,7 @@ export default function OurCoffees({ products }: OurCoffeesProps) {
   return (
     <OurCoffeesContainer className="container">
       <TitleText size="l" color="subtitle">
-        Nossos Produtos
+        Nossas Camisas
       </TitleText>
 
       <CoffeeList>

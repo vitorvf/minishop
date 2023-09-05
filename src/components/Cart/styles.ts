@@ -59,6 +59,14 @@ export const DialogContent = styled(Dialog.Content, {
 
   "& > .summaryItems": {
     marginTop: "auto",
+    // Adicione as media queries aqui
+    "@media (max-width: 480px)": {
+      marginTop: "18.5rem",
+    },
+
+    "@media (min-width: 513px) and (max-width: 613px)": {
+      marginTop: "18.5rem",
+    },
 
     "& > div": {
       display: "flex",
