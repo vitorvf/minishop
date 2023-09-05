@@ -11,6 +11,21 @@ export const HeaderContainer = styled("header", {
   justifyContent: "center",
 });
 
+export const DivHeader = styled("div", {
+  width: "100%",
+  maxWidth: "1120px",
+  margin: "0px auto",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "end",
+  // space-between
+  padding: "3.2rem 1.6rem",
+});
+
+export const DivButton = styled("div", {});
+
+export const LinkLogo = styled("a", {});
+
 export const ButtonCartContainer = styled("button", {
   // Estilos para a largura padrão do botão
   borderRadius: 6,

@@ -20,6 +20,14 @@ export const TitleText = styled.h1<TitleTextProps>`
   font-family: ${({ theme }) => theme.fonts.title};
   line-height: 130%;
   font-weight: ${({ weight }) => weight ?? 800};
+
+  @media (max-width: 480px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 513px) and (max-width: 613px) {
+    text-align: center;
+  }
 `;
 
 export const RegularText = styled.p<RegularTextProps>`

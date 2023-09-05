@@ -16,17 +16,9 @@ export const PriceAntes = styled("div", {
   fontSize: "12px",
   fontWeight: "600",
   color: "#747474",
-  // text-decoration: line-through;
-  //   font-size: 12px;
-  //   font-weight: 500;
-  //   color: #747474;
 });
 
 export const ImageContainer = styled("div", {
-  // width: "100%",
-  // maxWidth: 576,
-  // height: 656,
-  // background: "linear-gradient(180deg, #1ea483 0%, #7465d4 100%)",
   borderRadius: 8,
   padding: "0.25rem",
 
@@ -38,11 +30,32 @@ export const ImageContainer = styled("div", {
     objectFit: "cover",
     borderRadius: "8px",
   },
+
+  "@media (max-width: 480px)": {
+    padding: "2.25rem",
+  },
+
+  "@media (min-width: 513px) and (max-width: 613px)": {
+    padding: "2.25rem",
+  },
 });
 
 export const ProductDetails = styled("div", {
   display: "flex",
   flexDirection: "column",
+
+  // Adicione as media queries aqui
+  "@media (max-width: 480px)": {
+    gridRow: 2, // Isso remove a margem à esquerda em telas menores que 480px
+    textAlign: "center",
+    alignItems: "center",
+  },
+
+  "@media (min-width: 513px) and (max-width: 613px)": {
+    gridRow: 2, // Isso remove a margem à esquerda em telas entre 513px e 613px
+    textAlign: "center",
+    alignItems: "center",
+  },
 
   h1: {
     fontSize: "2rem",
@@ -73,6 +86,14 @@ export const ProductDetails = styled("div", {
     cursor: "pointer",
     fontWeight: "bold",
     fontSize: "$md",
+
+    "@media (max-width: 480px)": {
+      marginTop: "26px",
+    },
+
+    "@media (min-width: 513px) and (max-width: 613px)": {
+      marginTop: "26px",
+    },
 
     "&:disabled": {
       opacity: 0.6,

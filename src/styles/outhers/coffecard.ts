@@ -49,6 +49,14 @@ export const CoffeeCardContainer = styled.div`
       }
     }
   } */
+
+  @media (max-width: 480px) {
+    box-shadow: 0 0 0 1px #dfe1e5, 0 0 15px 0 #dfe1e5;
+  }
+
+  @media screen and (min-width: 513px) and (max-width: 613px) {
+    box-shadow: 0 0 0 1px #dfe1e5, 0 0 15px 0 #dfe1e5;
+  }
 `;
 
 export const ImageCard = styled.div`
@@ -144,6 +152,14 @@ export const DivTags = styled.div`
   font-size: 10px;
   font-weight: bold;
   text-transform: uppercase;
+
+  @media (max-width: 480px) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 513px) and (max-width: 613px) {
+    justify-content: center;
+  }
 `;
 
 export const Lancamento = styled.div`
