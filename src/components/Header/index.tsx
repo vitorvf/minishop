@@ -29,11 +29,11 @@ export default function Header() {
     <HeaderContainer>
       {/* <Image src={logoImg} alt="" /> */}
       <DivHeader>
-        {/* <LinkLogo>
-          <Link href={"/"}>
-            <Image src={logoImg} alt="" />
-          </Link>
-        </LinkLogo> */}
+        <LinkLogo>
+          {/* <Link href={"/"}> */}
+          <Image src={logoImg} alt="" />
+          {/* </Link> */}
+        </LinkLogo>
 
         <DivButton>
           <Dialog.Root>

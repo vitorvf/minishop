@@ -3,7 +3,8 @@ import React from "react";
 
 export const ProductContainer = styled("main", {
   display: "grid",
-  gridTemplateColumns: "1fr 1fr",
+  // gridTemplateColumns: "1fr 1fr",
+  gridTemplateColumns: "2fr 1fr",
   alignItems: "stretch",
   gap: "4rem",
 
@@ -21,7 +22,7 @@ export const PriceAntes = styled("div", {
 export const ImageContainer = styled("div", {
   borderRadius: 8,
   padding: "0.25rem",
-
+  marginTop: "7rem",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -29,20 +30,33 @@ export const ImageContainer = styled("div", {
   img: {
     objectFit: "cover",
     borderRadius: "8px",
+
+    "@media (max-width: 480px)": {
+      width: "100%",
+    },
+
+    "@media (min-width: 513px) and (max-width: 613px)": {
+      width: "100%",
+    },
   },
 
   "@media (max-width: 480px)": {
-    padding: "2.25rem",
+    padding: "30px",
+    width: "100vw",
+    marginTop: "6rem",
   },
 
   "@media (min-width: 513px) and (max-width: 613px)": {
-    padding: "2.25rem",
+    padding: "30px",
+    width: "100vw",
+    marginTop: "6rem",
   },
 });
 
 export const ProductDetails = styled("div", {
   display: "flex",
   flexDirection: "column",
+  marginTop: "7rem",
 
   // Adicione as media queries aqui
   "@media (max-width: 480px)": {

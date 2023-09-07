@@ -19,7 +19,7 @@ export default function Intro() {
 
   return (
     <IntroContainer>
-      <IntroContent className="container">
+      <IntroContent className="">
         <div>
           <section>
             <IntroTitle size="xl">

@@ -1,14 +1,28 @@
 import { styled } from "@stitches/react";
+import { backgrounds } from "polished";
 import React from "react";
 
 export const HeaderContainer = styled("header", {
   padding: "2rem 0",
   width: "100%",
-  maxWidth: 1180,
+  height: "90px",
+  background: "white",
+  position: "fixed",
+  // maxWidth: 1180,
   margin: "0 auto",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+  zIndex: "888",
+
+  // Adicione as media queries aqui
+  "@media (max-width: 480px)": {
+    padding: "2rem 0.7rem",
+  },
+
+  "@media (min-width: 513px) and (max-width: 613px)": {
+    padding: "2rem 0.7rem",
+  },
 });
 
 export const DivHeader = styled("div", {
@@ -17,9 +31,9 @@ export const DivHeader = styled("div", {
   margin: "0px auto",
   display: "flex",
   alignItems: "center",
-  justifyContent: "end",
+  justifyContent: "space-between",
   // space-between
-  padding: "3.2rem 1.6rem",
+  // padding: "3.2rem 1.6rem",
 });
 
 export const DivButton = styled("div", {});

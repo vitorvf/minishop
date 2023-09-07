@@ -5,7 +5,10 @@ import { rgba } from "polished";
 import React from "react";
 
 export const IntroContainer = styled.section`
-  width: 100%;
+  position: relative;
+  margin-top: 3px;
+
+  /* width: 100%;
   height: 34rem;
 
   background: ${({ theme }) => `url(${introBackgroundImg}) no-repeat center,
@@ -19,7 +22,7 @@ export const IntroContainer = styled.section`
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 
   @media (max-width: 480px) {
     img {
@@ -37,11 +40,27 @@ export const IntroContainer = styled.section`
 `;
 
 export const IntroContent = styled.div`
-  width: 100%;
+  /* width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3.5rem;
+  gap: 3.5rem; */
+
+  width: 100%;
+  max-width: 1120px;
+  padding: 9.4rem 1.6rem 1.6rem;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 41.8rem 1fr;
+  gap: 5.6rem;
+
+  @media (max-width: 480px) {
+    grid-template-columns: none;
+  }
+
+  @media screen and (min-width: 513px) and (max-width: 613px) {
+    grid-template-columns: none;
+  }
 `;
 
 export const IntroTitle = styled(TitleText)`

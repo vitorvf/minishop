@@ -20,6 +20,7 @@ export const TitleText = styled.h1<TitleTextProps>`
   font-family: ${({ theme }) => theme.fonts.title};
   line-height: 130%;
   font-weight: ${({ weight }) => weight ?? 800};
+  font-family: "Roboto";
 
   @media (max-width: 480px) {
     text-align: center;
