@@ -56,12 +56,14 @@ export const ImageContainer = styled("div", {
 export const ProductDetails = styled("div", {
   display: "flex",
   flexDirection: "column",
+  marginTop: "7rem",
 
   // Adicione as media queries aqui
   "@media (max-width: 480px)": {
     gridRow: 2, // Isso remove a margem à esquerda em telas menores que 480px
     textAlign: "center",
     alignItems: "center",
+    marginTop: "0rem",
   },
 
   "@media (min-width: 513px) and (max-width: 613px)": {
