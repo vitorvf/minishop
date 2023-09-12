@@ -56,7 +56,6 @@ export const ImageContainer = styled("div", {
 export const ProductDetails = styled("div", {
   display: "flex",
   flexDirection: "column",
-  marginTop: "7rem",
 
   // Adicione as media queries aqui
   "@media (max-width: 480px)": {
