@@ -102,11 +102,11 @@ export const ProductDetails = styled("div", {
     fontSize: "$md",
 
     "@media (max-width: 480px)": {
-      marginTop: "14px",
+      marginBottom: "2rem",
     },
 
     "@media (min-width: 513px) and (max-width: 613px)": {
-      marginTop: "14px",
+      marginBottom: "2rem",
     },
 
     "&:disabled": {

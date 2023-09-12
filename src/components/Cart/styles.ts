@@ -61,11 +61,11 @@ export const DialogContent = styled(Dialog.Content, {
     marginTop: "auto",
     // Adicione as media queries aq
     "@media (max-width: 480px)": {
-      marginTop: "17.5rem",
+      marginTop: "15.5rem",
     },
 
     "@media (min-width: 513px) and (max-width: 613px)": {
-      marginTop: "17.5rem",
+      marginTop: "15.5rem",
     },
 
     "& > div": {

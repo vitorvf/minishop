@@ -6,7 +6,6 @@ import React from "react";
 
 export const IntroContainer = styled.section`
   position: relative;
-  margin-top: 3px;
 
   /* width: 100%;
   height: 34rem;

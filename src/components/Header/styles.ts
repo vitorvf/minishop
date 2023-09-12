@@ -17,11 +17,11 @@ export const HeaderContainer = styled("header", {
 
   // Adicione as media queries aqui
   "@media (max-width: 480px)": {
-    padding: "2rem 0.7rem",
+    padding: "2rem 0.6rem",
   },
 
   "@media (min-width: 513px) and (max-width: 613px)": {
-    padding: "2rem 0.7rem",
+    padding: "2rem 0.6rem",
   },
 });
 
